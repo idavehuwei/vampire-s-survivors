@@ -1,0 +1,45 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+
+# Export templates
+/templates/
+
+# Visual Studio Code
+/.vscode/
+
+# IntelliJ IDEA
+/.idea/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Godot specific
+/export_presets.cfg
+/*.uid
