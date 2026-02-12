@@ -3,6 +3,15 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
+### 2.5（2026-02-12）
+- 完成“打败敌人”功能：剑技能命中后消灭目标
+  - 敌人：通过 Area2D 监听 area_entered，命中后 queue_free
+    - [basic_enemy.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/basic_enemy/basic_enemy.gd)
+    - [basic_enemy.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/basic_enemy/basic_enemy.tscn)
+  - 技能：动画中控制 CollisionShape2D 的启用窗口，结束时自动销毁；设置碰撞层为 4
+    - [sword_ability.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability/sword_ability.tscn)
+  - 控制器：生成位置加入轻微随机偏移，并旋转朝向目标，提高命中稳定性
+    - [sword_ability_controller.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability_controller/sword_ability_controller.gd)
 ### 2.4（2026-02-12）
 - 用 sword 攻击怪物：基于距离选择目标并在其位置释放剑技能
   - 在控制器中新增范围选择与距离排序，优先攻击最近敌人（MAX_RANGE=150）
