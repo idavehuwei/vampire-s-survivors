@@ -3,7 +3,6 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
-
 ### 2.3（2026-02-12）
 - 扩展完善 sword 能力——实现多剑环绕攻击模式
   - 扩展 sword_ability_controller.gd，实现多把剑围绕玩家的环形分布
@@ -11,6 +10,13 @@
   - 为剑技能添加伤害区域检测，增强战斗体验
   - 改进剑技能的生命周期管理，提升性能表现
   - 更新相关注释和代码文档，便于后续维护
+
+### 2.2（见提交记录）
+- 初步实现剑技能与控制器
+  - 计时器驱动在玩家位置生成单把剑技能，可通过导出变量配置场景
+  - 影响文件：
+    - [sword_ability_controller.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability_controller/sword_ability_controller.gd)
+    - [sword_ability.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability/sword_ability.tscn)
 
 ### 2.1（2026-02-12）
 - 相机改为插值平滑跟随玩家（相机位置与目标位置做 lerp），视觉更自然。
