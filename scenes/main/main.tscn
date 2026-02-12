@@ -14,10 +14,16 @@ tile_map_data = PackedByteArray("AAAOAAcAAAABAAQAAAAOAAYAAAABAAQAAAAOAAUAAAABAAQ
 tile_set = ExtResource("1_iuonh")
 
 [node name="Player" parent="." unique_id=262093170 instance=ExtResource("1_hyk8p")]
-position = Vector2(108, 39)
+position = Vector2(69, 57)
 
 [node name="BasicEnemy" parent="." unique_id=882467377 instance=ExtResource("4_l3cfh")]
 position = Vector2(460, 105)
 
 [node name="BasicEnemy2" parent="." unique_id=1011446444 instance=ExtResource("4_l3cfh")]
-position = Vector2(130, 351)
+position = Vector2(147, 303)
+
+[node name="BasicEnemy3" parent="." unique_id=1130625926 instance=ExtResource("4_l3cfh")]
+position = Vector2(531, 343)
+
+[node name="BasicEnemy4" parent="." unique_id=1795780692 instance=ExtResource("4_l3cfh")]
+position = Vector2(404, 258)
