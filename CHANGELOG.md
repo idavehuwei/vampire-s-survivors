@@ -3,10 +3,21 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
+### 2.4（2026-02-12）
+- 用 sword 攻击怪物：基于距离选择目标并在其位置释放剑技能
+  - 在控制器中新增范围选择与距离排序，优先攻击最近敌人（MAX_RANGE=150）
+    - [sword_ability_controller.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability_controller/sword_ability_controller.gd)
+  - 为基础敌人场景加入分组 ["enemy"]，便于技能检索目标
+    - [basic_enemy.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/basic_enemy/basic_enemy.tscn)
+  - 主场景新增一名敌人实例并调整初始位置，便于验证攻击逻辑
+    - [main.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/main/main.tscn)
+  - 项目配置新增 global_group: enemy，规范化分组
+    - [project.godot](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/project.godot)
 ### 2.3（2026-02-12）
 - 扩展完善 sword 能力——实现多剑环绕攻击模式
   - 扩展 sword_ability_controller.gd，实现多把剑围绕玩家的环形分布
   - 优化剑技能的生成算法，支持动态角度分布
+  - 为剑技能添加伤害区域检测，增强战斗体验
   - 为剑技能添加伤害区域检测，增强战斗体验
   - 改进剑技能的生命周期管理，提升性能表现
   - 更新相关注释和代码文档，便于后续维护
