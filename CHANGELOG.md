@@ -3,6 +3,16 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
+### 2.6（2026-02-12）
+- 注释完善和项目微调：统一脚本注释风格、明确职责与行为说明（不改逻辑）
+  - 玩家控制：补充分组说明与移动流程注释
+    - [player.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/player/player.gd)
+  - 主相机：改为“插值平滑跟随”的表述，解释 lerp 因子作用
+    - [game_camera.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/game_camera/game_camera.gd)
+  - 剑技能控制器：补充范围过滤、距离排序、随机偏移与朝向说明
+    - [sword_ability_controller.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/ability/sword_ability_controller/sword_ability_controller.gd)
+  - 基础敌人：补充命中监听与销毁处理说明
+    - [basic_enemy.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/basic_enemy/basic_enemy.gd)
 ### 2.5（2026-02-12）
 - 完成“打败敌人”功能：剑技能命中后消灭目标
   - 敌人：通过 Area2D 监听 area_entered，命中后 queue_free
