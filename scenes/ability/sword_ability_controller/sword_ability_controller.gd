@@ -50,8 +50,10 @@ func on_timer_timeout():
 	# 将技能添加到玩家的父节点：确保与玩家处于同一层级，便于坐标/渲染管理
 	# 在最近敌人的位置处生成技能实例
 	sword_instance.global_position = enemies[0].global_position
+	# 轻微随机偏移，避免完全重叠并提升动画观感
 	sword_instance.global_position += Vector2.RIGHT.rotated(randf_range(0,TAU)) * 4
  
+	# 朝向目标旋转，使剑面指向敌人
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
 	sword_instance.rotation = enemy_direction.angle()
 	

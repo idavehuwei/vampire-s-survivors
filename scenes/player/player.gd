@@ -1,3 +1,5 @@
+# 玩家控制：基于输入映射计算移动方向并执行滑动式移动
+# 通过场景分组加入 "player"，供相机与能力系统检索
 extends CharacterBody2D
 
 # 统一的移动速度标量，单位为像素/秒
@@ -5,7 +7,7 @@ const MAX_SPEED = 200
 
 # 节点进入场景时调用。当前是 pass，占位，未做初始化
 func _ready() -> void:
-	#add_to_group("player")
+	# 分组在 player.tscn 中设置为 ["player"]；此处无需重复添加
 	pass
 	
 
