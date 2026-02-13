@@ -3,6 +3,18 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
+### 2.8（2026-02-13）
+- 略微优化：提高移动与相机跟随的平滑度，规范碰撞分层与像素对齐；不改变核心玩法逻辑。
+  - 玩家：加入加速度平滑（指数趋近），转向更顺滑，速度变化更自然。
+    - [player.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/player/player.gd)
+  - 主相机：采用指数趋近的插值因子，跟随稳定性更佳。
+    - [game_camera.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/game_camera/game_camera.gd)
+  - 基础敌人：规范 CharacterBody2D 的 collision_layer/mask，设置 motion_mode，保持 Area2D 命中层为 4。
+    - [basic_enemy.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/basic_enemy/basic_enemy.tscn)
+  - 项目配置：定义 2D 物理层名称（Terrain、Player、Enemy、EnemyCollsion）；开启像素对齐（snap_2d_transforms_to_pixel）。
+    - [project.godot](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/project.godot)
+  - 敌人管理器：补充职责与用法注释，便于后续维护（逻辑不变）。
+    - [enemy_manager.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/manager/enemy_manager.gd)
 ### 2.7（2026-02-13）
 - 自动生成怪物：新增敌人管理器，按计时器周期在玩家周围随机方向、固定半径生成敌人实例（SPAWN_RADIUS=350）。
   - 敌人管理器：导出 basic_enemy_scene，在 _ready 中连接 Timer.timeout；基于玩家 global_position 与随机角度计算生成点。
