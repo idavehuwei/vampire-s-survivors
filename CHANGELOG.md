@@ -3,6 +3,13 @@
 本文件用于记录每次版本变更、涉及文件以及新增/调整的功能点，帮助快速理解项目演进与各文件职责。
 
 ## 版本历史
+### 2.7（2026-02-13）
+- 自动生成怪物：新增敌人管理器，按计时器周期在玩家周围随机方向、固定半径生成敌人实例（SPAWN_RADIUS=350）。
+  - 敌人管理器：导出 basic_enemy_scene，在 _ready 中连接 Timer.timeout；基于玩家 global_position 与随机角度计算生成点。
+    - [enemy_manager.gd](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/manager/enemy_manager.gd)
+    - [enemy_manager.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/manager/enemy_manager.tscn)
+  - 主场景：集成 EnemyManager，启用自动刷怪流程。
+    - [main.tscn](file:///Users/weihu/Documents/MyWorkSpace2026/MyDungeon/vampire's-survivors/scenes/main/main.tscn)
 ### 2.6（2026-02-12）
 - 注释完善和项目微调：统一脚本注释风格、明确职责与行为说明（不改逻辑）
   - 玩家控制：补充分组说明与移动流程注释
