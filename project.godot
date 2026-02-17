@@ -15,6 +15,10 @@ run/main_scene="uid://borbvkfntuw31"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameEvents="*uid://r3svy23ark4d"
+
 [debug]
 
 gdscript/warnings/unused_parameter=0
