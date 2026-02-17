@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bmmdjf2i55sob"]
+
+[ext_resource type="Script" uid="uid://dr76yt24a54rc" path="res://scenes/component/vial_drop_component.gd" id="1_l1ouf"]
+
+[node name="VialDropComponent" type="Node" unique_id=517730196]
+script = ExtResource("1_l1ouf")

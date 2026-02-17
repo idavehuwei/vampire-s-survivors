@@ -4,6 +4,9 @@ extends CharacterBody2D
 const MAX_SPEED = 75
 # 最大移动速度（像素/秒）
 
+@onready var health_componment: HealthComponent = $HealthComponent
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# 监听技能的 Area2D 进入事件：被命中时执行销毁
@@ -27,4 +30,4 @@ func get_direction_to_player():
 	
 func on_area_entered(other_area: Area2D): 
 	# 命中判定：敌人被技能击中后自我销毁
-	queue_free()
+	health_componment.damage(5)
